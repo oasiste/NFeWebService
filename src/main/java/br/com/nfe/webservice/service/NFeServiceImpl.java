@@ -17,6 +17,7 @@ import br.com.usicamp.nfe.core.dto.RetConsReciNFe;
 import br.com.usicamp.nfe.core.dto.RetEnvEvento;
 import br.com.usicamp.nfe.core.dto.RetEnviNFe;
 import br.com.usicamp.nfe.core.dto.RetInutNFe;
+import br.com.usicamp.nfe.core.dto.TipoICMS;
 
 
 public class NFeServiceImpl implements NFeService{
@@ -52,12 +53,8 @@ public class NFeServiceImpl implements NFeService{
 		return (RetInutNFe) webService.getRetorno();
 	}
 
-	public RetEnvEvento enviaCartaCorrecao(String cUF,String xmlCartaCorrecao) throws SAXException, IOException,
-			ParserConfigurationException, ServiceException, SOAPException,
-			Exception {
-//		String xmlCartaCorrecao = XMLv2.getXmlCartaCorrecao(envEventoDTO);
-//		xmlCartaCorrecao = certificado.assinarRaiz(xmlCartaCorrecao);
-		WebService webService = WebServiceUF.getInstance(cUF).getCartaCorrecao(1, xmlCartaCorrecao);
+	public RetEnvEvento enviaEvento(String cUF,String xmlEvento) throws Exception{
+		WebService webService = WebServiceUF.getInstance(cUF).getCartaCorrecao(1, xmlEvento);
 		webService.envia();
 		return (RetEnvEvento)webService.getRetorno();
 	}

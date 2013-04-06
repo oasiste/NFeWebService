@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.usicamp.nfe</groupId>
-    <version>02.00.00-02</version>
+    <version>02.00.00-05</version>
   
   <artifactId>nfewebservice</artifactId>
   <name>nfewebservice</name>
@@ -14,11 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
  
- <repository>
-            <id>cloudbees-private-snapshot-repository</id>
-            <name>cloudbees-private-snapshot-repository</name>
-            <url>dav:https://repository-oasiste.forge.cloudbees.com/snapshot/</url>
-        </repository>
+
  
  <dependencies>
 
@@ -52,40 +48,53 @@
 			<artifactId>retInutNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>procNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>retEnviNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>retCancNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>cancNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>retConReciNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 		
 		<dependency> 
-			<groupId>com.oas.nfe</groupId>
+			<groupId>br.com.usicamp.nfe</groupId>
 			<artifactId>retEnvEvento</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		
+		<dependency> 
+			<groupId>br.com.oasystem.nfe</groupId>
+			<artifactId>retEnvEventoCancNFe</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency> 
+			<groupId>br.com.oasystem.nfe</groupId>
+			<artifactId>procEventoCancNFe</artifactId>
 			<version>1.0</version>
 		</dependency>
 

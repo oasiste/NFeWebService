@@ -52,7 +52,7 @@ public class NfeRecepcaoEvento2GOProd extends NfeRecepcaoEvento2 {
 	        NfeRecepcaoEventoResult lote2Result =  nfeRecepcaoEvento.getNfeRecepcaoEventoServicePort().nfeRecepcaoEvento(cabecMsg, dadosMsg);  //getNfeRetRecepcaoServicePort().nfeRetRecepcao2(cabecMsg, dadosMsg);
 	        
 	        for (MessageElement me : lote2Result.get_any()) {
-	        	this.envEventoDocument = RetEnvEventoDocument.Factory.parse(me.toString());//RetConsReciNFeDocument.Factory.parse(me.toString());
+	        	this.envEventoDocument = br.inf.portalfiscal.nfe.cancelamento.RetEnvEventoDocument.Factory.parse(me.toString());//RetConsReciNFeDocument.Factory.parse(me.toString());
 	        	System.out.println(me.toString());
 //	        	retConsReciNFe.setXmlRetorno(me.toString());
 	        }

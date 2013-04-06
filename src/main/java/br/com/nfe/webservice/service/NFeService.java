@@ -23,8 +23,6 @@ public interface NFeService {
 	public RetCancNFe cancelaNFe(String cUF,Integer ambiente,String xmlCancelamento) throws SAXException, IOException, ParserConfigurationException, ServiceException, SOAPException,Exception; 
 	RetInutNFe inutilizaNFe(String cUF,Integer ambiente,String xmlInut,Certificado certificado) throws SAXException, IOException, ParserConfigurationException, ServiceException, SOAPException,Exception;
 	
-	RetEnvEvento enviaCartaCorrecao(String cUF,String xmlCartaCorrecao) throws SAXException, IOException,
-			ParserConfigurationException, ServiceException, SOAPException,
-			Exception ;
+	RetEnvEvento enviaEvento(String cUF,String xmlEvento) throws Exception ;
 	
 }

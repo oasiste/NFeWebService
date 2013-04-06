@@ -3,12 +3,12 @@ package br.com.nfe.webservice.v2;
 import br.com.nfe.webservice.WebService;
 import br.com.usicamp.nfe.core.dto.RetEnvEvento;
 import br.com.usicamp.nfe.core.dto.Retorno;
-import br.inf.portalfiscal.nfe.RetEnvEventoDocument;
-import br.inf.portalfiscal.nfe.TretEvento;
+import br.inf.portalfiscal.nfe.cancelamento.TRetEvento;
+import br.inf.portalfiscal.nfe.cancelamento.RetEnvEventoDocument;
 
 public abstract class NfeRecepcaoEvento2 implements WebService {
 
-	protected RetEnvEventoDocument envEventoDocument;
+	protected RetEnvEventoDocument  envEventoDocument;
 	
 	public Retorno getRetorno() {
 		
@@ -27,7 +27,7 @@ public abstract class NfeRecepcaoEvento2 implements WebService {
 		
 		retEnvEvento.setIdLote(envEventoDocument.getRetEnvEvento().getIdLote());
 		
-		for(TretEvento tretEvento: envEventoDocument.getRetEnvEvento().getRetEventoArray()){
+		for(TRetEvento tretEvento: envEventoDocument.getRetEnvEvento().getRetEventoArray()){
 			RetEnvEvento.RetEvento retEvento = retEnvEvento.new RetEvento();
 			retEvento.setVersao(tretEvento.getVersao());
 			retEvento.getInfEvento().setChNFe(tretEvento.getInfEvento().getChNFe());
